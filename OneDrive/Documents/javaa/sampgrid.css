@@ -1,0 +1,54 @@
+.grid-container
+{
+   display:grid;
+   grid-template-columns:auto auto auto auto;
+   grid-template-columns:auto auto auto auto;
+   margin:20px;
+   padding:10px;
+   grid-gap:30px;
+   background-color:violet;
+   row-gap:10px;
+}
+.grid-container>div
+{
+   color:blue;
+}
+.a{
+   background-color:pink;
+   text-align:center;
+   padding:20px;  
+ }
+.a1{
+   grid-row-start:2;
+   background-color:pink;
+   text-align:center;
+   padding:20px;
+}
+@media screen and (max-width:670px)
+{
+   .grid-container
+{
+   display:grid;
+   grid-template-columns:auto auto auto;
+   grid-template-columns:auto auto auto;
+   margin:20px;
+   padding:10px;
+   grid-gap:30px;
+   background-color:green;
+   row-gap:10px;
+}
+.grid-container>div
+{
+   color:red;
+}
+.a{
+   background-color:yellow;
+   text-align:justify;
+   padding:20px;  
+ }
+.a1{
+   background-color:yellow;
+   text-align:center;
+   padding:20px;
+}
+   

@@ -1,0 +1,57 @@
+import java.util.*;
+class BankAccount
+{
+   String accountno;
+   double balance;
+   BankAccount(String accountno,double balance)
+   {
+      this.accountno=accountno;
+      this.balance=balance;
+   }
+   void deposit(double amount)
+   {
+      balance+=amount;
+      System.out.println(balance);
+   }
+   void withdraw(double amount)
+   {
+     if(balance>=amount)
+     {
+       balance-=amount;
+       System.out.println(balance);
+      }
+     else
+       System.out.println("insufficient amount");
+   }
+   double balance()
+   {
+      return balance;
+   }
+}
+class SavingsAccount extends BankAccount
+{
+   SavingsAccount(String accountno,double balance)
+   {
+     super(accountno,balance);
+    }
+   @Override
+   public void withdraw(double amount)
+   {
+      if((balance()-amount)<100)
+         System.out.println("minimum is 100 rup");
+      else
+      {
+         super.withdraw(amount);
+      }
+   }
+   public static void main(String[] args)
+   {
+      Scanner sc=new Scanner(System.in);
+      double amount=sc.nextDouble();
+      SavingsAccount obj=new SavingsAccount("123a",200000);
+      //obj.deposit(amount);
+      obj.withdraw(amount);
+      
+    }
+}
+         

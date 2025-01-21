@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            .box{
+                width:300px;
+                height:300px;
+                border:1px solid black;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                $(".box").hover(function(){
+                    $(this).find("img").stop(true,true).fadeOut();
+                },
+                function(){
+                    $(this).find("img").stop(true,true).fadeIn();
+                });
+
+            });
+        </script>
+       <div class="box">
+           <img src="C:\Users\chand\OneDrive\Pictures\Screenshots\2023-10-03 (3).png" height="200px" width="200px">
+       </div>
+    </body>
+</html>>

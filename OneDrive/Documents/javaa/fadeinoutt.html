@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                $(".b1").click(function(){
+                    $("p.normal").fadeOut();
+                    $("p.fast").fadeOut("fast");
+                    $("p.slow").fadeOut("slow");
+                    $("p.very-fast").fadeOut(20);
+                    $("p.very-slow").fadeOut(3000);
+                });
+                $(".b2").click(function(){
+                    $("p.normal").fadeIn();
+                    $("p.fast").fadeIn("fast");
+                    $("p.slow").fadeIn("slow");
+                    $("p.very-fast").fadeIn(30);
+                    $("p.very-slow").fadeIn(2000);
+                });
+            });
+        </script>
+        <p class="normal">normal</p>
+        <p class="fast">fast</p>
+        <p class="slow">slow</p>
+        <p class="very-fast">very-fast</p>
+        <p class="very-slow">very-slow</p>
+        <button class="b1">fadeout</button>
+        <button class="b2">fadein</button>
+    </body>
+</html>

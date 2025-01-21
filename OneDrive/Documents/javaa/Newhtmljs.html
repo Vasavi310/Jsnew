@@ -1,0 +1,31 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1 id="xx">Arrays</h1>
+        <h2 id="yy">yy</h2>
+        <script>
+            let person={
+               name:"vasavi",
+               age:20,
+               address:{
+                   street:"teachers colony",
+                   district:"mbnr",
+                   state:"telangana"
+               },
+               hobbies:["aa","bb","cc"],
+               job:{
+                title:"engineer",
+                works:["x","y","z"]
+               }
+            }
+            let obj="";
+            obj+=`<p>name of person ${person.name}</p>`;
+            obj+=`<p>address ${person.address.state}</p>`;
+            obj+=`<p>job work ${person.job.works[1]}</p>`;
+            document.getElementById("xx").innerHTML=obj;
+
+            </script>
+    </body>
+<html>

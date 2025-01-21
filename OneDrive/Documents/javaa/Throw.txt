@@ -1,0 +1,39 @@
+class CustomException extends Exception
+{
+   CustomException(String message)
+   {
+      super(message);
+   }
+}
+class Throw
+{
+   public static void main(String[] args)
+   {
+      try
+      {
+       operation();
+      }
+      catch(CustomException e)
+      {
+          System.out.println("Exception occurs"+e.getMessage());
+      }
+}
+static void operation() throws CustomException
+{
+      try
+      {
+         int a=1/0;
+      } 
+      catch(ArithmeticException e)
+      {
+          System.out.println("division by 0 is not possible");
+          throw new CustomException("Exception occurs");
+      }
+      finally
+      {
+         System.out.println("executed successfully");
+      }
+   }
+}
+
+       

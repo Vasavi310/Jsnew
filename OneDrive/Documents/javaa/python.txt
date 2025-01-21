@@ -1,0 +1,13 @@
+import cv2-OpenCV(open source computer vision)which is used in face recognition,video manipulation,image manipulation,object detection.(python library)
+
+import pygame-used in computer graphics
+
+pygame.mixer.init()-used in music and sound systems(before using this we need to initialize pygame(pygame.init())
+
+to set up camera we use
+cv2.VideoCapture(0)-to capture the video and 0 indicates the index of the default camera(if u have multiple cameras u can use 1,2etc.....)
+
+
+
+
+

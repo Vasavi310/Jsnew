@@ -1,0 +1,12 @@
+.grid-container
+{
+   display:grid;
+   grid-template-columns:auto auto;
+   grid-template-columns:auto auto;
+   margin:20px;
+   padding:30px;
+}
+.a{
+   background-color:pink;
+   text-align:center;
+ }

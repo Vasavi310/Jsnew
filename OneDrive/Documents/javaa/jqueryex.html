@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                $("ul li").css("background-color","lightblue");
+                $("ul.m li").css("background-color","pink");
+                $("ul#m1 li").css("background-color","green");
+                $('.m span').css("background-color","lightgreen");
+                $('a[target="_blank"]').css("background-color","yellow");
+            });
+        </script>
+        <body>
+            <ul>
+                <li>first ul 1li</li>
+                <li>first ul 2li</li>
+                <li>first ul 3li</li>
+            </ul>
+            <ul class="m">
+                <li>second ul 1li</li>
+                
+                <li>second <span>ul </span> 2li</li>
+                <li>second ul 3li</li>
+            </ul>
+            <ul id="m1">
+                <li>third ul 1li</li>
+                <li>third ul 2li</li>
+                <li>third ul 3li</li>
+            </ul>
+            <a href="hii" target="_blank">Hello</a>
+        </body>
+</html>

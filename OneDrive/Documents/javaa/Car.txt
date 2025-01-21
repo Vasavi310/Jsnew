@@ -1,0 +1,33 @@
+import java.util.*;
+class Vehicle
+{
+   String colour;
+   String no;
+   Vehicle(String colour,String no)
+   {
+      this.colour=colour;
+      this.no=no;
+   }
+   void drive()
+   {
+      System.out.println("driving a bike");
+   }
+}
+class Car extends Vehicle
+{
+   Car(String colour,String no)
+   {
+      super(colour,no);
+   }
+   @Override
+   void drive()
+   {
+      System.out.println("repairing a car");
+   }
+   public static void main(String[] args)
+   {
+      Scanner sc=new Scanner(System.in);
+      Car obj=new Car("blue","123");
+      obj.drive();
+   }
+}
