@@ -1,0 +1,31 @@
+<!-- Write a function greet that takes a name and a callback function.
+The function should return a greeting message by calling the callback with
+the message. -->
+
+
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="enname" placeholder="enter name">
+        <button onclick="greet1()">Click here</button>
+        <h1 id="idd"></h1>
+        <script>
+            function greet(name,callback)
+          {
+            return callback(name);
+          }
+          function greeting(name)
+          {
+             return "Hi "+name;
+          }
+          function greet1()
+          {
+            let name=document.getElementById("enname").value;
+            const x=greet(name,greeting);
+            document.getElementById("idd").innerHTML=x;
+          }
+          
+        </script>
+    </body>
+</html>

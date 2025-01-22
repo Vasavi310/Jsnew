@@ -1,0 +1,39 @@
+<!-- Write a function delayedMessage(message, delay) that prints the
+message after the specified delay using setTimeout. Use a callback for when
+the message has been printed. -->
+
+<html>
+<head>
+</head>
+<body>
+    <h1>Delayed Message</h1>
+
+    <input type="text" id="message" placeholder="Enter your message" />
+    <input type="number" id="delay" placeholder="Enter delay in milliseconds" />
+    
+    <button onclick="handle()">Show Message</button>
+
+    <div id="output"></div>
+
+    <script>
+        function delayedmsg(message, delay) {
+            setTimeout(() => {
+                document.getElementById("output").innerHTML = message;
+                console.log("Message has been printed!");
+            }, delay);
+        }
+
+        function handle() {
+            const message = document.getElementById("message").value;
+            const delay = document.getElementById("delay").value;
+            
+            if (message && delay && !isNaN(delay)) {
+                delayedmsg(message, parseInt(delay));
+            } else {
+                alert("Please enter a valid message and delay!");
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,50 @@
+<!-- Write a function fetchDataWithCallback that simulates fetching
+data from an API with a delay. Implement error handling in the callback,
+where the callback can receive either a successful response or an error
+message. Test the function by simulating both success and failure scenarios. -->
+
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="enurl" placeholder="Enter URL">
+        <button onclick="tsuccessfailure()">Click here</button>
+        <h1 id="idd"></h1>
+        <script>
+            function call(url, callback) {
+
+                setTimeout(function() {
+                    const success = Math.random() > 0.5;
+
+                    if (success) {
+                        const response = { data: 'Fetched data from ' + url };
+                        callback(null, response); 
+                    } else {
+                        const error = 'Failed to fetch data from ' + url;
+                        callback(error, null); 
+                    }
+                }, 2000); 
+            }
+
+            function success(error, data) {
+                if (error) {
+                    document.getElementById("idd").innerHTML = `Error: ${error}`;
+                } else {
+                    document.getElementById("idd").innerHTML = `Success: ${data.data}`;
+                }
+            }
+
+            function tsuccessfailure() {
+                const url = document.getElementById("enurl").value;
+
+                if (url.trim() === "") {
+                    alert("Please enter a valid URL.");
+                    return;
+                }
+
+
+                call(url, success);
+            }
+        </script>
+    </body>
+</html>

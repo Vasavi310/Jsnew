@@ -1,0 +1,51 @@
+<!-- Create three functions that take a number, multiply it by 2,
+subtract 3, and then add 10. Use callbacks to chain these operations together. -->
+
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="ennumber" placeholder="enter number">
+        <button onclick="calculate()">Click here</button>
+        <h1 id="idd"></h1>
+        <script>
+           function mul(a,callback)
+           {
+               return callback(a*2);
+           }
+           function sub(a,callback)
+           {
+               return callback(a-3);
+           }
+           function add(a,callback)
+           {
+               return callback(a+10);
+           }
+           function calculate()
+           {
+               const a1=document.getElementById("ennumber").value;
+               mul(a1,(mres,err)=>{
+                if(!err)
+                   sub(mres,(sres,err)=>{
+                       if(!err)
+                          add(sres,(ares,err)=>{
+                          document.getElementById("idd").innerHTML=ares;
+                        }
+                       
+                    )
+                    else
+                        {
+                            alert("an error occured ")
+                        }
+                });
+                else
+                   alert("an error occured during execution");
+                
+               });
+               
+           }
+
+          
+        </script>
+    </body>
+</html>
